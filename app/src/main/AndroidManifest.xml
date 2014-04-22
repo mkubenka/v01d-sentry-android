@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="sk.v01d.sentry" >
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:name="sk.v01d.sentry.EventApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="sk.v01d.sentry.EventListActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="sk.v01d.sentry.EventDetailActivity"
+            android:label="@string/title_event_detail"
+            android:parentActivityName="sk.v01d.sentry.EventListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="sk.v01d.sentry.EventListActivity" />
+        </activity>
+    </application>
+
+</manifest>
